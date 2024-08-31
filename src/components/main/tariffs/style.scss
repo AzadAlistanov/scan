@@ -1,0 +1,184 @@
+@import '../../../index.scss';
+
+.tariffs {
+  background: $white-color;
+  padding: 37px 0 118px;
+
+  h2 {
+    font-family: $font-ferry;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 54px;
+    -webkit-text-stroke-width: thick;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 66px;
+  }
+
+  .tariffs__wrap {
+    display: flex;
+    justify-content: center;
+
+    .tariffs__item {
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+      width: 415px;
+      border-radius: 10px;
+      overflow: hidden;
+      font-family: $font-inter;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21.78px;
+      letter-spacing: 0.01em;
+
+      &:not(&:last-child) {
+        margin-right: 38px;
+      }
+
+      .tariffs__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 5px;
+        height: 132px;
+
+        .tariffs__title {
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 36.31px;
+          margin: 30px 0 10px 30px;
+        }
+
+        .tariffs__assignment {
+          margin: 0 0 34px 30px;
+        }
+      }
+
+      .tariffs__discription_wrap {
+        padding: 30px 0 30px 30px;
+        position: relative;
+
+        .current-tariff {
+          background: rgba(59, 165, 224, 1);
+          border-radius: 10px;
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          padding: 3px 13px;
+          color: $white-color;
+        }
+
+        .tariff_price {
+
+          & p:first-child {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 36.31px;
+
+            span {
+              font-size: 25px;
+              font-weight: 500;
+              margin-left: 19px;
+              text-decoration: line-through;
+              opacity: 50%;
+            }
+          }
+
+          & p:last-child {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.78px;
+          }
+
+        }
+
+        .tariff-includes {
+          margin: 59px 0 10px 0;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 0.01em;
+        }
+
+        ul {
+
+          li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 5px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              background-image: url('../../../../public/images/icons/check.png');
+            }
+          }
+        }
+
+        .tariffs_btns {
+          margin-top: 55px;
+          padding-right: 30px;
+
+          button {
+            width: 100%;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24.2px;
+            padding: 18px 0;
+          }
+
+          .per-acc-btn {
+            background: rgba(210, 210, 210, 1);
+            color: $black-color;
+          }
+
+          .go-to-btn {
+            background: rgba(89, 112, 255, 1);
+            color: $white-color;
+          }
+        }
+      }
+
+    }
+
+    .tariff-beginner {
+      .tariffs__header {
+        background: $orange-color;
+      }
+    }
+
+    .tariff-pro {
+      .tariffs__header {
+        background: $light-blue-color;
+      }
+    }
+
+    .tariff-business {
+      .tariffs__header {
+        background: $black-color;
+        color: $white-color;
+      }
+    }
+
+    .tariffs-active {
+      border: 2px solid rgba(255, 182, 79, 1);
+
+    }
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .tariffs__wrap {
+    flex-wrap: wrap;
+    gap: 37px;
+
+    .tariffs__item {
+      margin-right: 0px !important;
+
+    }
+  }
+}

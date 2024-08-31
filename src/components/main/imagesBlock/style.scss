@@ -1,0 +1,26 @@
+@import '../../../index.scss';
+
+.image-block {
+  background: $white-color;
+  padding-bottom: 70px;
+
+  .image-block__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .image-block__wrap {
+    justify-content: center !important;
+
+    img {
+      width: 100%;
+    }
+
+    .image-block-cloud {
+      display: none;
+    }
+  }
+}

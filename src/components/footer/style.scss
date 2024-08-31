@@ -1,0 +1,40 @@
+@import '../../index.scss';
+
+.footer {
+
+  background: $turquoise-color;
+
+  .footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .footer__info {
+      font-family: $font-inter;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: end;
+      color: $white-color;
+    }
+
+    p:last-child {
+      margin-top: 21px;
+    }
+  }
+
+  @media (max-width: 755px) {
+
+    .footer__wrap {
+      align-items: start;
+
+      img {
+        width: 111px;
+      }
+
+
+    }
+  }
+
+}

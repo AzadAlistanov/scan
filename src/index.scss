@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Шрифты
+$font-ferry: "Anton SC", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+// Цвета
+// Основные
+$turquoise-color: rgba(2, 148, 145, 1);
+$black-color: rgba(0, 0, 0, 1);
+$white-color: rgba(255, 255, 255, 1);
+// Дополнительные
+$orange-color: rgba(255, 182, 79, 1);
+$light-blue-color: rgba(124, 227, 225, 1);
+$blue-color: rgba(89, 112, 255, 1);
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  background: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.container {
+  padding: 0 60px
+}
+
+.cursor {
+  cursor: pointer
+}
+
+.hover:hover {
+  box-shadow: 0px 0px 20px 0px $turquoise-color;
+
+}
+
+@media (max-width: 755px) {
+
+  .body {
+    max-width: 755px
+  }
+
+  .container {
+    padding: 0 14px
+  }
+
+}

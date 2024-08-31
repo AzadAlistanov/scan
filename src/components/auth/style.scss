@@ -1,0 +1,237 @@
+@import '../../index.scss';
+
+.sign-in {
+  background: $white-color;
+  padding: 60px 0;
+
+  .sign-in__wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .sign-in__title-img {
+    position: absolute;
+    bottom: 0px;
+    left: 112px;
+
+  }
+
+  .sign-in__title {
+    max-width: 820px;
+
+
+    p {
+      font-family: $font-ferry;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 48px;
+      text-transform: uppercase;
+      -webkit-text-stroke-width: thick;
+      letter-spacing: 0.07em;
+    }
+
+
+    img {
+      margin-left: 112px;
+    }
+  }
+
+  .form {
+    font-family: $font-inter;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0.02em;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-radius: 10px;
+    width: 429px;
+    margin-right: auto;
+
+    .sign-links {
+      display: flex;
+      margin-bottom: 40px;
+
+      a {
+        text-decoration-line: none;
+        position: relative;
+        color: rgba(199, 199, 199, 1);
+      }
+
+      a:first-child {
+        margin-left: 52px;
+      }
+
+      a:last-child {
+        margin-left: 88px;
+      }
+
+      a:first-child::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 151px;
+        background: rgba(199, 199, 199, 1);
+        bottom: -7px;
+        left: -50px;
+      }
+
+      a:last-child::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 213px;
+        background: rgba(199, 199, 199, 1);
+        bottom: -7px;
+        left: -24px;
+      }
+
+      .auth-link-active {
+        color: $turquoise-color;
+      }
+
+      .auth-link-active::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 151px;
+        bottom: -7px;
+        left: -50px;
+        background: $turquoise-color !important;
+      }
+
+    }
+
+    .sign-in__form {
+      display: flex;
+      flex-direction: column;
+      color: rgba(148, 148, 148, 1);
+
+      input {
+        margin: 15px 0 20px;
+        border: 1px solid rgba(199, 199, 199, 1);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        height: 43px;
+        padding: 5px;
+        font-size: 16px;
+        color: $turquoise-color;
+        font-family: $font-inter;
+      }
+
+      .auth-btn {
+        background: $blue-color;
+        width: 100%;
+        height: 59px;
+        border-radius: 5px;
+        border: none;
+        font-family: Inter;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26.63px;
+        letter-spacing: 0.02em;
+        color: $white-color;
+        opacity: 50%;
+      }
+
+      .auth-btn-active {
+        opacity: inherit;
+      }
+
+      a {
+        color: $blue-color;
+        margin: 15px 0 30px;
+        text-align: center;
+      }
+
+      .auth-message__wrap {
+        display: flex;
+        margin: 14px 0;
+
+        img {
+          margin-right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+
+    .sign-in__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .sign-in__title {
+
+        p {
+          font-size: 22px;
+          line-height: 26.4px;
+
+        }
+      }
+
+      .form {
+        margin: 126px 0 49px;
+        padding: 15px;
+        max-width: 335px;
+        font-size: 14px;
+
+        a:first-child {
+          margin-left: 31px;
+        }
+
+        a:last-child {
+          margin-left: 67px;
+        }
+
+        a:first-child::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 103px;
+          background: rgba(199, 199, 199, 1);
+          bottom: -7px;
+          left: -30px;
+        }
+
+        a:last-child::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 182px;
+          background: rgba(199, 199, 199, 1);
+          bottom: -7px;
+          left: -24px;
+        }
+
+        .auth-link-active {
+          color: $turquoise-color;
+        }
+
+        .auth-link-active::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 103px;
+          bottom: -7px;
+          left: -30px;
+          background: $turquoise-color !important;
+        }
+      }
+
+      .sign-in__title-img {
+        position: initial;
+      }
+
+      .sign-in__title-img {
+        max-width: 321px;
+      }
+    }
+
+
+
+  }
+}
